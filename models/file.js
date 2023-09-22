@@ -3,17 +3,18 @@ const mongoose = require("mongoose")
 const File = new mongoose.Schema({
     path: {
         type: String,
-        required: true
+        required: true,
     },
     originalName: {
         type: String,
-        required: true
+        required: true,
     },
     password: String,
     downloadCount: {
         type: Number,
         required: true,
-        default: 0
-    }
+        default: 0,
+    },
 })
-mongoose.model("File", File)
+
+module.exports = mongoose.model("File", File)
